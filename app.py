@@ -1,9 +1,9 @@
 import os
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate  # ✅ Add this
+from flask_migrate import Migrate 
 from send_mail import send_mail
-from config import DevelopmentConfig, ProductionConfig  # ✅ Import your configs
+from config import DevelopmentConfig, ProductionConfig  # Import your configs
 
 app = Flask(__name__)
 
