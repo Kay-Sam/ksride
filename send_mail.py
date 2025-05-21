@@ -10,8 +10,8 @@ def send_mail(ride_id, customer, driver, rating, comments):
     password = os.getenv("EMAIL_PASS")
     message = f"<h3>New Feedback Submission</h3><ul><li>ride_id: {ride_id}</li><li>Customer: {customer}</li><li>Driver: {driver}</li><li>Rating: {rating}</li><li>Comments: {comments}</li></ul>"
 
-    sender_email = 'kayodesamuel2003@gmail.com'
-    receiver_email = 'kayodesamuel2588@gmail.com'
+    sender_email = os.getenv("EMAIL_USER")
+    receiver_email = os.getenv("RCV_EMAIL")
     msg = MIMEText(message, 'html')
     msg['Subject'] = 'KSRide Feedback'
     msg['From'] = sender_email
