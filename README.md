@@ -14,5 +14,5 @@ pip install -r requirements
 python app.py
 ```
 
-### Heroku Deployment Steps
+
 

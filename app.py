@@ -44,6 +44,7 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
+    print("DB in use:", app.config['SQLALCHEMY_DATABASE_URI'])  # 👈 ADD THIS
     if request.method == 'POST':
         ride_id = request.form['ride_id']        
         customer = request.form['customer']
